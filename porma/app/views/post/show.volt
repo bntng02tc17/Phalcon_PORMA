@@ -57,7 +57,7 @@
                               </button>
                             </div>
                             <div class="modal-body">
-                              <img src="{{'/img/post/' ~ post.foto}}" alt="..." class="img-thumbnail">
+                              <img src="{{'/img/post/' ~ post.namaGambar}}" alt="..." class="img-thumbnail">
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -75,9 +75,50 @@
           
                   <hr>
           
-                  
+                  <!-- Comments Form -->
+                  <div class="card my-4">
+                    <h5 class="card-header">Komentar</h5>
+                    <div class="card-body">
+                            {{ form('comment/create/' ~ post.id) }}
+                            <fieldset>
+                                    <div class="control-group">
+                                           {#  {{ form.label('komentar', ['class': 'control-label']) }} #}
+                                            <div class="controls">
+                                                {{ form.render('komentar', ['class': 'form-control', 'rows' : '3']) }}
+                                            
+                                            </div>
+                                        </div>
+                                        <br>
+                                <div class='control-group'>
+                                    {{ submit_button('Comment', 'class': 'btn btn-primary') }}
+                                </div>
+                            </fieldset>
+                            {{ endForm() }}
+                    </div>
+                  </div>
           
-                 {#                 <!-- Comment with nested comments -->
+                  <!-- Single Comment -->
+                  {% for comment in comments %}
+                      <div class="card">
+                          <div class="card-header">
+                              {{comment.c.created_at}}
+                              {% if (comment.c.userid == auth['id']) OR auth['role'] == "admin" %}
+                              <a href="{{url('comment/delete/' ~ comment.c.id)}}" class="badge badge-danger">Delete</a>
+                              <a href="{{url('comment/edit/' ~ comment.c.id)}}" class="badge badge-warning">Edit</a>
+                            {% endif %}
+                          </div>
+                          <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                              <p>{{comment.c.komentar}}.</p>
+                              <footer class="blockquote-footer"><cite title="Source Title">{{comment.b.email}}</cite></footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                        <br>
+                  
+                {% endfor %}
+          {#
+                  <!-- Comment with nested comments -->
                   <div class="media mb-4">
                     <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
                     <div class="media-body">
@@ -160,14 +201,14 @@
           
                   <!-- Side Widget -->
                   <div class="card my-4">
-              <h5 class="card-header">Contact Person PORMA</h5>
+              <h5 class="card-header">Contact Person Foundit</h5>
               <div class="card-body">
                 <address>
                   <abbr title="Phone">P:</abbr>
                   (123) 456-7890
                   <br>
                   <abbr title="Email">E:</abbr>
-                  <a href="mailto:#">admin@PORMA.com</a>
+                  <a href="mailto:#">admin@foundit.com</a>
                 </address>
               </div>
             </div>

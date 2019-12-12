@@ -5,8 +5,8 @@
 
 {%block content %}
 
-<div class="container">  
-        <h3>LAMAN POST BERITA</h3>
+<div class="container" style="width: 50%; align-content: left">  
+        <h3 align="center">LAMAN POST BERITA</h3>
         <hr>
         {{ form('post/create', 'enctype' : 'multipart/form-data') }}
         <div class="container-md p-3 mb-2 bg-light text-dark">
@@ -44,9 +44,9 @@
                         </div> -->
                     </div>
                 </div>
-                <br>
-                    {{ submit_button('Post', 'class': 'btn btn-primary') }}
-                    
+                <br><div align="center">
+                    {{ submit_button('Post', 'class': 'btn btn-lg btn-primary') }}
+                </div>
                 </div>
             </fieldset>
             <hr>

@@ -194,7 +194,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; PORMA</p>
+      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT</p>
     </div>
     <!-- /.container -->
   </footer>

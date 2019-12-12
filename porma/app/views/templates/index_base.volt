@@ -19,9 +19,9 @@
 
 <body style="padding-top: 70px;">
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #013880">
     <div class="container">
-      <a class="navbar-brand" href="#">W</a>
+      <a class="navbar-brand" href="#"><strong>Foundit</strong></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -182,9 +182,9 @@
 
   {%block footer %}
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
+  <footer class="py-4" style="background-color: #013880">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; PORMA 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT 2019</p>
     </div>
     <!-- /.container -->
   </footer>
