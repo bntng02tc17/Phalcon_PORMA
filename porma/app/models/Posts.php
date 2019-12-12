@@ -15,13 +15,13 @@ class Posts extends Model
 
     public function initialize()
     {
-        $this->hasMany(
-            'id',
-            'Comments',
-            'postid'
-        );
+        // $this->hasMany(
+        //     'id',
+        //     'Comments',
+        //     'postid'
+        // );
         $this->belongsTo(
-            'userid',
+            'user_id',
             'Users',
             'id'
         );

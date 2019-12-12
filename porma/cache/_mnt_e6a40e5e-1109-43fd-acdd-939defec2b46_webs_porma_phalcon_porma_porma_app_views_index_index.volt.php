@@ -22,7 +22,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="http://foundit.local/">FOUNDIT</a>
+      <a class="navbar-brand" href="http://PORMA.local/">PORMA</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,8 +39,8 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">FOUNDIT</h1>
-          <p class="lead mb-5 text-white-50">Biarkan kami membantu Anda mencari barang Anda yang hilang</p>
+          <h1 class="display-4 text-white mt-5 mb-2">PORMA</h1>
+          <p class="lead mb-5 text-white-50">Cari event kamu di sini!</p>
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
       <div class="col-md-8 mb-5">
         <h2>Yang Kami Lakukan</h2>
         <hr>
-        <p>Bersama kami, Anda dapat mencari informasi lebih terkait barang Anda yang hilang atau bahkan membantu orang lain yang kehilangan barang</p>
+        <p>Bersama kami, kamu dapat mengetahui berbagai event anak muda kekinian!</p>
         <a class="btn btn-primary btn-lg" href="/session">Pelajari lebih lanjut&raquo;</a>
       </div>
       <div class="col-md-4 mb-5">
@@ -75,7 +75,7 @@
           (123) 456-7890
           <br>
           <abbr title="Email">E:</abbr>
-          <a href="mailto:#">admin@foundit.com</a>
+          <a href="mailto:#">admin@PORMA.com</a>
         </address>
       </div>
     </div>
@@ -86,8 +86,8 @@
         <div class="card h-100">
           <!-- <img class="card-img-top" src="http://placehold.it/300x200" alt=""> -->
           <div class="card-body">
-            <h4 class="card-title">Posting Berita Kehilangan</h4>
-            <p class="card-text">Di FOUNDIT Anda dapat menyebarkan berita kehilangan kepada netizen.</p>
+            <h4 class="card-title">Posting Event Kekinian</h4>
+            <p class="card-text">Di PORMA kamu dapat mempromosikan event yang kamu adain!.</p>
           </div>
           <div class="card-footer">
             <a href="/session" class="btn btn-primary">Find Out More!</a>
@@ -98,8 +98,8 @@
         <div class="card h-100">
           <!-- <img class="card-img-top" src="http://placehold.it/300x200" alt=""> -->
           <div class="card-body">
-            <h4 class="card-title">Beritahu Pemilik</h4>
-            <p class="card-text">Anda dapat memberikan komentar informasi pada postingan berita kehilangan untuk membantu pemilik barang menemukan barangnya.</p>
+            <h4 class="card-title">Cari Event</h4>
+            <p class="card-text">kamu bisa menemukan berbagai event di sini!</p>
           </div>
           <div class="card-footer">
             <a href="/session" class="btn btn-primary">Find Out More!</a>
@@ -111,7 +111,7 @@
           <!-- <img class="card-img-top" src="http://placehold.it/300x200" alt=""> -->
           <div class="card-body">
             <h4 class="card-title">Sunting / Hapus</h4>
-            <p class="card-text">Barang sudah ditemukan? atau ada typo di penulisan postingan / komentar? Anda bisa sunting atau hapus postingan / komentar anda.</p>
+            <p class="card-text">Ada typo di postingan? jangan khawatir. kamu bisa menyunting/menghapus postingamu di sini</p>
           </div>
           <div class="card-footer">
             <a href="/session" class="btn btn-primary">Find Out More!</a>
@@ -129,7 +129,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; PORMA 2019</p>
     </div>
     <!-- /.container -->
   </footer>

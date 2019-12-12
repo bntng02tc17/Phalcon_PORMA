@@ -1,4 +1,4 @@
-a:3:{i:0;s:1776:"<!DOCTYPE html>
+a:5:{i:0;s:231:"<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,7 +8,7 @@ a:3:{i:0;s:1776:"<!DOCTYPE html>
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Blog Post - Start Bootstrap Template</title>
+ ";s:5:"title";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:39:" <?php echo $this->tag->getTitle(); ?> ";s:4:"file";s:107:"/mnt/e6a40e5e-1109-43fd-acdd-939defec2b46/webs/PORMA/Phalcon_PORMA/porma/app/views/templates/show_base.volt";s:4:"line";i:11;}}i:1;s:1869:"
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -16,12 +16,24 @@ a:3:{i:0;s:1776:"<!DOCTYPE html>
   <!-- Custom styles for this template -->
   <link href="css/blog-post.css" rel="stylesheet">
 
+  <style>
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px; /* Set the fixed height of the footer here */
+      line-height: 60px; /* Vertically center the text there */
+      background-color: #f5f5f5;
+    }
+    </style>
+
 </head>
 
 <body style="padding-top: 70px;">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">FOUNDIT</a>
+          <a class="navbar-brand" href="#">PORMA</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -35,7 +47,9 @@ a:3:{i:0;s:1776:"<!DOCTYPE html>
               <li class="nav-item">
                 <a class="nav-link" href="/post/myindex">My Post</a>
               </li>
-              
+              <li class="nav-item">
+                <a class="nav-link" href="/post/new">Buat Post</a>
+              </li>
               
               <li class="nav-item">
                 <a class="nav-link" href="/session/end">Log Out</a>
@@ -210,13 +224,13 @@ a:3:{i:0;s:1776:"<!DOCTYPE html>
     <!-- /.row -->
 
   </div>
-  ";s:4:"file";s:50:"/home/msyah/foundit/app/views/templates/post2.volt";s:4:"line";i:215;}}i:1;s:876:"
+  ";s:4:"file";s:107:"/mnt/e6a40e5e-1109-43fd-acdd-939defec2b46/webs/PORMA/Phalcon_PORMA/porma/app/views/templates/show_base.volt";s:4:"line";i:227;}}i:2;s:874:"
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; PORMA 2019</p>
     </div>
     <!-- /.container -->
   </footer>

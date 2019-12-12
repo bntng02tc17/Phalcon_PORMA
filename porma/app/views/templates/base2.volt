@@ -22,7 +22,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="http://foundit.local/">FOUNDIT</a>
+      <a class="navbar-brand" href="http://PORMA.local/">PORMA</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -54,8 +54,8 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">FOUNDIT</h1>
-          <p class="lead mb-5 text-white-50">Biarkan kami membantu Anda mencari barang Anda yang hilang</p>
+          <h1 class="display-4 text-white mt-5 mb-2">PORMA</h1>
+          <p class="lead mb-5 text-white-50">Cari event kamu di sini!</p>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; PORMA 2019</p>
     </div>
     <!-- /.container -->
   </footer>

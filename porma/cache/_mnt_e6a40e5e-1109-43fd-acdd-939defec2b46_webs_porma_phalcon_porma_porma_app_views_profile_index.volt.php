@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>  <?php echo $this->tag->getTitle(); ?> </title>
+  <?php echo $this->tag->getTitle(); ?> 
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -33,7 +33,7 @@
 <body style="padding-top: 70px;">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">FOUNDIT</a>
+          <a class="navbar-brand" href="#">PORMA</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -61,30 +61,30 @@
 
   <!-- Page Content -->
   
-<?= $this->getContent() ?>
-<?= $this->tag->form(['comment/save']) ?>
-                            <fieldset>
-                                <?= $form->render('id') ?>
-                                    <div class="control-group">
-                                           
-                                            <div class="controls">
-                                                <?= $form->render('komentar', ['class' => 'form-control', 'rows' => '3']) ?>
-                                            
-                                            </div>
-                                        </div>
-                                        <br>
-                                <div class='control-group'>
-                                    <?= $this->tag->submitButton(['Comment', 'class' => 'btn btn-primary']) ?>
-                                </div>
-                            </fieldset>
-                            <?= $this->tag->endform() ?>
+
+    <div class="container">
+            <div class="card">
+                    <a href="<?= $this->url->get('profile/edit/' . $user->id) ?>" class="badge badge-warning">Edit</a>
+                    <div class="card-header">
+                      <?= $user->username ?>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><?= $user->nik ?></li>
+                      <li class="list-group-item"><?= $user->nama ?></li>
+                      <li class="list-group-item"><?= $user->tempat_lahir ?> / <?= $user->tanggal_lahir ?></li>
+                    </ul>
+                  </div>
+        
+    </div>
+    <hr>
+
 
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; PORMA 2019</p>
     </div>
     <!-- /.container -->
   </footer>

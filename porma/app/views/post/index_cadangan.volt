@@ -96,7 +96,7 @@
                             (123) 456-7890
                             <br>
                             <abbr title="Email">E:</abbr>
-                            <a href="mailto:#">admin@foundit.com</a>
+                            <a href="mailto:#">admin@PORMA.com</a>
                           </address>
               </div>
             </div>

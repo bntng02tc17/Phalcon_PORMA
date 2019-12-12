@@ -16,14 +16,14 @@ class Users extends Model
         $this->hasMany(
             'id',
             'Posts',
-            'userid'
+            'user_id'
         );
 
-        $this->hasMany(
-            'id',
-            'Comments',
-            'userid'
-        );
+        // $this->hasMany(
+        //     'id',
+        //     'Comments',
+        //     'userid'
+        // );
     }
 
     public function validation()
@@ -34,12 +34,26 @@ class Users extends Model
             'email',
             new UniquenessValidator(
                 [
-                    'message' => 'Sorry, The email was registered by another user',
+                    'message' => 'Mohon maaf, email sudah digunakan',
                 ]
             )
         );
-
-
+        $validator->add(
+            'username',
+            new UniquenessValidator(
+                [
+                    'message' => 'mohon maaf, username sudah digunakan',
+                ]
+            )
+        );
+        $validator->add(
+            'nik',
+            new UniquenessValidator(
+                [
+                    'message' => 'mohon maaf, NIK sudah digunakan',
+                ]
+            )
+        );
         
         return $this->validate($validator);
     }

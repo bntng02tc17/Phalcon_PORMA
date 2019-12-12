@@ -4,16 +4,19 @@
     
 
     <div class="container">  
-    <h3>LAMAN DAFTAR</h3>
+    <h3>LAMAN EDIT PROFILE</h3>
     <p>Daftar untuk mendapatkan berbagai fitur dari <span class="font-weight-bold">PORMA</span></p>
     <hr>
-    {{ form('signup/create') }}
+    {{ form('profile/save') }}
     <div class="container-md p-3 mb-2 bg-light text-dark">
         {% if(content()) %}
             {{content()}}
         {% endif %}
         <fieldset>
             {% for element in form %}
+            {% if element.label === 'id' %} 
+            {% continue %}
+            {% else %}
             <div class="control-group">
                     {{ element.label(['class': 'control-label']) }}
                     <div class="controls">
@@ -21,6 +24,7 @@
                         <p class="help-block">(required)</p>
                     </div>
                 </div>
+                {%endif %}
             {% endfor %}
             
 
@@ -77,7 +81,6 @@
                 
             </div>
         </fieldset>
-        <a href="/session">Sudah punya akun?</a>
         <hr>
     </div>
     {{ endForm() }}

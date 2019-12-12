@@ -38,7 +38,7 @@ class SecurityPlugin extends Plugin
 
             //Private area resources
             $privateResources = [
-                'post'    => ['index', 'search', 'new', 'edit', 'save', 'create', 'delete'],
+                'post'    => ['index', 'search', 'new', 'edit', 'save', 'create', 'delete','show'],
                 'session'     => ['search',  'edit', 'save',  'delete'],
                 'signup' => [ 'search', 'edit', 'save', 'delete'],
                 'comment'     => ['index', 'search', 'new', 'edit', 'save', 'create', 'delete'],
@@ -57,6 +57,8 @@ class SecurityPlugin extends Plugin
                 'register'   => ['index'],
                 // 'errors'     => ['show401', 'show404', 'show500'],
                 'session'    => ['index', 'register', 'start', 'end'],
+
+                'profile'    => ['index', 'search', 'new', 'edit', 'save', 'create', 'delete','show'],
             ];
             foreach ($publicResources as $resource => $actions) {
                 $acl->addResource(
