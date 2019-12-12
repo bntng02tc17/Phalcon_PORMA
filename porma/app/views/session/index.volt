@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container">
     <h3>LAMAN MASUK</h3>
-    <p>Masuk dengan menggunakan akun <span class="font-weight-bold">FOUNDIT</span></p>
+    <p>Masuk dengan menggunakan akun <span class="font-weight-bold">PORMA</span></p>
     <hr>
     {{ form('session/start') }}
         <div class="container-md p-3 mb-2 bg-light text-dark">

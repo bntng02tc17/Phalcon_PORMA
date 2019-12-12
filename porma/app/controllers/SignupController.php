@@ -23,11 +23,15 @@ class SignupController extends ControllerBase
 
             if($form->isValid($this->request->getPost())){
 
-                $name = $this->request->getPost('name', ['string', 'striptags']);
-                $username = $this->request->getPost('username', 'alphanum');
-                $email = $this->request->getPost('email', 'email');
+                // echo $this->request->getPost('nik');
+                // return false;
+
+                // $name = $this->request->getPost('name', ['string', 'striptags']);
+                // $username = $this->request->getPost('username', 'alphanum');
+                // $email = $this->request->getPost('email', 'email');
                 $password = $this->request->getPost('password');
                 $repeatPassword = $this->request->getPost('repeatPassword');
+
 
                 if ($password != $repeatPassword) {
                     $this->flash->error('Passwords are different');
@@ -37,14 +41,31 @@ class SignupController extends ControllerBase
                             "action"     => "index",
                         ]
                     );
-                    //return $this->response->redirect('signup/index');
 
                     //return false;
                 } else {
                     $user = new Users();
-                    $user->password = $password;
-                    $user->email = $email;
-                    $user->created_at = new Phalcon\Db\RawValue('now()');
+                    // $user->password = $password;
+                    // $user->email = $email;
+                    // $user->created_at = new Phalcon\Db\RawValue('now()');
+
+                    $data = $this->request->getPost();
+                    $user->foto = "default.png";
+
+                    if (!$form->isValid($data, $user)) {
+                        $messages = $form->getMessages();
+            
+                        foreach ($messages as $message) {
+                            $this->flash->error($message);
+                        }
+            
+                        return $this->dispatcher->forward(
+                            [
+                                'controller' => 'signup',
+                                'action'     => 'index',
+                            ]
+                        );
+                    }
 
                     if ($user->save() == false) {
                         foreach ($user->getMessages() as $message) {

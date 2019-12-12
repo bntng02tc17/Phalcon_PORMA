@@ -12,7 +12,7 @@ return new \Phalcon\Config([
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => 'Password.123',
-        'dbname'      => 'foundit',
+        'dbname'      => 'porma',
         'charset'     => 'utf8',
     ],
     'application' => [

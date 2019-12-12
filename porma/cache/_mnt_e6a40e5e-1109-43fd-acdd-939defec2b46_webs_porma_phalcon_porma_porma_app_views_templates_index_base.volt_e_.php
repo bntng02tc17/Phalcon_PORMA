@@ -9,7 +9,7 @@ a:7:{i:0;s:231:"<!DOCTYPE html>
   <meta name="author" content="">
   ";s:5:"title";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:45:"
     <?php echo $this->tag->getTitle(); ?>
-  ";s:4:"file";s:108:"/mnt/e6a40e5e-1109-43fd-acdd-939defec2b46/webs/PORMA/Phalcon_PORMA/porma/app/views/templates/index_base.volt";s:4:"line";i:12;}}i:1;s:1504:"
+  ";s:4:"file";s:108:"/mnt/e6a40e5e-1109-43fd-acdd-939defec2b46/webs/PORMA/Phalcon_PORMA/porma/app/views/templates/index_base.volt";s:4:"line";i:12;}}i:1;s:1498:"
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Custom styles for this template -->
@@ -21,7 +21,7 @@ a:7:{i:0;s:231:"<!DOCTYPE html>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">FOUNDIT</a>
+      <a class="navbar-brand" href="#">W</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -180,11 +180,11 @@ a:7:{i:0;s:231:"<!DOCTYPE html>
   ";s:4:"file";s:108:"/mnt/e6a40e5e-1109-43fd-acdd-939defec2b46/webs/PORMA/Phalcon_PORMA/porma/app/views/templates/index_base.volt";s:4:"line";i:180;}}i:2;s:5:"
 
 
-  ";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:207:"
+  ";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:205:"
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; PORMA 2019</p>
     </div>
     <!-- /.container -->
   </footer>

@@ -22,7 +22,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="http://foundit.local/">FOUNDIT</a>
+      <a class="navbar-brand" href="http://PORMA.local/">PORMA</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,8 +39,8 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">FOUNDIT</h1>
-          <p class="lead mb-5 text-white-50">Biarkan kami membantu Anda mencari barang Anda yang hilang</p>
+          <h1 class="display-4 text-white mt-5 mb-2">PORMA</h1>
+          <p class="lead mb-5 text-white-50">Cari event kamu di sini!</p>
         </div>
       </div>
     </div>
@@ -51,45 +51,35 @@
     
 
     <div class="container">  
-    <h3>LAMAN DAFTAR</h3>
-    <p>Daftar untuk mendapatkan berbagai fitur dari <span class="font-weight-bold">FOUNDIT</span></p>
+    <h3>LAMAN EDIT PROFILE</h3>
+    <p>Daftar untuk mendapatkan berbagai fitur dari <span class="font-weight-bold">PORMA</span></p>
     <hr>
-    <?= $this->tag->form(['signup/create']) ?>
+    <?= $this->tag->form(['profile/save']) ?>
     <div class="container-md p-3 mb-2 bg-light text-dark">
         <?php if (($this->getContent())) { ?>
             <?= $this->getContent() ?>
         <?php } ?>
         <fieldset>
+            <?php foreach ($form as $element) { ?>
+            <?php if ($element->label === 'id') { ?> 
+            <?php continue; ?>
+            <?php } else { ?>
             <div class="control-group">
-                <?= $form->label('email', ['class' => 'control-label']) ?>
-                <div class="controls">
-                    <?= $form->render('email', ['class' => 'form-control']) ?>
-                    <p class="help-block">(required)</p>
-                    <!-- <div class="alert alert-warning" id="email_alert">
-                        <strong>Warning!</strong> Please enter your email
-                    </div> -->
+                    <?= $element->label(['class' => 'control-label']) ?>
+                    <div class="controls">
+                        <?= $element->render(['class' => 'form-control']) ?>
+                        <p class="help-block">(required)</p>
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <?= $form->label('password', ['class' => 'control-label']) ?>
-                <div class="controls">
-                    <?= $form->render('password', ['class' => 'form-control']) ?>
-                    <p class="help-block">(minimum 8 characters)</p>
-                    <!-- <div class="alert alert-warning" id="password_alert">
-                        <strong>Warning!</strong> Please provide a valid password
-                    </div> -->
-                </div>
-            </div>
-            <div class="control-group">
-                <?= $form->label('repeatPassword', ['class' => 'control-label']) ?>
-                <div class="controls">
-                    <?= $form->render('repeatPassword', ['class' => 'form-control']) ?>
-                    <p class="help-block">(minimum 8 characters)</p>
-                    <!-- <div class="alert alert-warning" id="password_alert">
-                        <strong>Warning!</strong> Please provide a valid password
-                    </div> -->
-                </div>
-            </div>
+                <?php } ?>
+            <?php } ?>
+            
+
+
+
+
+            
+            
             <br>
             <p class="help-block">Dengan mendaftar, Anda menyetujui syarat dan ketentuan yang berlaku.</p>
             <div class="form-actions">
@@ -97,7 +87,6 @@
                 
             </div>
         </fieldset>
-        <a href="/session">Sudah punya akun?</a>
         <hr>
     </div>
     <?= $this->tag->endform() ?>
@@ -108,7 +97,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; PORMA 2019</p>
     </div>
     <!-- /.container -->
   </footer>

@@ -138,8 +138,9 @@ class PostController extends ControllerBase
 
         // $post->judul = $this->request->getPost('judul');
         // $post->deskripsi = $this->request->getPost('deskripsi');
-        $post->status = "HILANG";
-        $post->userid = $userid;
+        
+        $post->status = "AKTIF";
+        $post->user_id = $userid;
 
         $uploadDir = BASE_PATH . "/public/img/post/";
         
@@ -190,7 +191,7 @@ class PostController extends ControllerBase
 
             $nama = $file->getName();
             $namaBaru = $uploadDir . $count . ".png";
-            $post->namaGambar = $count . ".png";
+            $post->foto = $count . ".png";
             $file->moveTo($namaBaru);
 
 
@@ -328,7 +329,7 @@ class PostController extends ControllerBase
         {
             $nama = $file->getName();
             $namaBaru = $uploadDir . $post->id . "_update.png";
-            $post->namaGambar = $id . "_update.png";
+            $post->foto = $id . "_update.png";
 
             // if(!$this->resizeImage($namaBaru))
             // {
@@ -406,14 +407,14 @@ class PostController extends ControllerBase
 
 
 
-        $query = $this->modelsManager->createQuery('SELECT c.*, b.* FROM Comments c, Users b  WHERE c.userid = b.id AND c.postid = :pid: ORDER BY c.created_at DESC ');
-        $rows  = $query->execute(
-    [
-        'pid' => $id,
-    ]
+//         $query = $this->modelsManager->createQuery('SELECT c.*, b.* FROM Comments c, Users b  WHERE c.userid = b.id AND c.postid = :pid: ORDER BY c.created_at DESC ');
+//         $rows  = $query->execute(
+//     [
+//         'pid' => $id,
+//     ]
     
-);
-$this->view->comments = $rows;
+// );
+// $this->view->comments = $rows;
 
 
     }

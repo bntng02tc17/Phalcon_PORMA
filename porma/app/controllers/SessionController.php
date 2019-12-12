@@ -33,7 +33,7 @@ class SessionController extends ControllerBase
             [
                 'id'   => $user->id,
                 'role' => $user->role,
-                'email' => $user->email,
+                'username' => $user->username,
             ]
         );
     }
@@ -48,13 +48,15 @@ class SessionController extends ControllerBase
             if($form->isValid($this->request->getPost())){
                 $email = $this->request->getPost('email');
                 $password = $this->request->getPost('password');
+                $username = $this->request->getPost('username');
 
                 $user = Users::findFirst(
                     [
-                        "email = :email: AND password = :password:",
+                        "(email = :email: OR username = :username:) AND password = :password:",
                         'bind' => [
                             'email'    => $email,
                             'password' => $password,
+                            'username' => $username,
                         ]
                     ]
                 );

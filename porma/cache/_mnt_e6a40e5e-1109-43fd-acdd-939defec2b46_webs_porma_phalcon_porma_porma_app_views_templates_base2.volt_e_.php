@@ -18,11 +18,11 @@ a:11:{i:0;s:231:"<!DOCTYPE html>
 </head>
 
 <body>
-";s:6:"navbar";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:560:"
+";s:6:"navbar";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:556:"
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="http://foundit.local/">FOUNDIT</a>
+      <a class="navbar-brand" href="http://PORMA.local/">PORMA</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,14 +33,14 @@ a:11:{i:0;s:231:"<!DOCTYPE html>
   </nav>
 ";s:4:"file";s:103:"/mnt/e6a40e5e-1109-43fd-acdd-939defec2b46/webs/PORMA/Phalcon_PORMA/porma/app/views/templates/base2.volt";s:4:"line";i:49;}}i:2;s:2:"
 
-";s:6:"header";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:399:"
+";s:6:"header";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:363:"
   <!-- Header -->
   <header class="bg-primary py-5 mb-5">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">FOUNDIT</h1>
-          <p class="lead mb-5 text-white-50">Biarkan kami membantu Anda mencari barang Anda yang hilang</p>
+          <h1 class="display-4 text-white mt-5 mb-2">PORMA</h1>
+          <p class="lead mb-5 text-white-50">Cari event kamu di sini!</p>
         </div>
       </div>
     </div>
@@ -123,11 +123,11 @@ a:11:{i:0;s:231:"<!DOCTYPE html>
   <!-- /.container -->
   ";s:4:"file";s:103:"/mnt/e6a40e5e-1109-43fd-acdd-939defec2b46/webs/PORMA/Phalcon_PORMA/porma/app/views/templates/base2.volt";s:4:"line";i:139;}}i:4;s:4:"
 
-  ";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:207:"
+  ";s:6:"footer";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:205:"
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; FOUNDIT 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; PORMA 2019</p>
     </div>
     <!-- /.container -->
   </footer>
