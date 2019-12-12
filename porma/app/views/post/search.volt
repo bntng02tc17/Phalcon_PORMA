@@ -147,14 +147,14 @@
     #}
             <!-- Side Widget -->
             <div class="card my-4">
-              <h5 class="card-header">Contact Person PORMA</h5>
+              <h5 class="card-header">Contact Person Foundit</h5>
               <div class="card-body">
                 <address>
                   <abbr title="Phone">P:</abbr>
                   (123) 456-7890
                   <br>
                   <abbr title="Email">E:</abbr>
-                  <a href="mailto:#">admin@PORMA.com</a>
+                  <a href="mailto:#">admin@foundit.com</a>
                 </address>
               </div>
             </div>

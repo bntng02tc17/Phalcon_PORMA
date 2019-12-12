@@ -9,16 +9,25 @@
     
           <!-- Blog Entries Column -->
           <div class="col-md-8">
-            <h1 class="my-4">
-                <p><strong>                
-                </strong></p>
-                
+            <div class="row">
+            <div class="col rounded" style="background-color: lightgrey">
+            <h1 class="my-4" >
+              <br>
+                <p style="font-family:Arial, Helvetica, sans-serif">
+                  <strong> Anda Kehilangan Sesuatu?          
+                  </strong>
+                </p>
+                <p style="font-size: 50%">
+                  Segera buat Berita Kehilangan
+                </p>
+              
+  
               <small>
                 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Buat Berita Kehilangan
+    Klik di sini!
   </button>
-  
+            </div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -33,7 +42,7 @@
             {{ form('post/create', 'enctype' : 'multipart/form-data') }}
             <fieldset>
                 <div class="control-group">
-                    {{ form.label('judul', ['class': 'control-label']) }} <small>Contoh : Dompet Hitam BlackBeard</small>
+                    {{ form.label('judul', ['class': 'control-label ']) }} <br><small>Contoh : Dompet Hitam BlackBeard</small>
                     <div class="controls">
                         {{ form.render('judul', ['class': 'form-control']) }}
                       
@@ -44,7 +53,7 @@
                 </div>
                 <br>
                 <div class="control-group">
-                  <p>{{ form.label('deskripsi', ['class': 'control-label']) }} <small>Sertakan lokasi dan waktu kejaidan serta kontak yang dapat dihubungi</small></p>  
+                  <p>{{ form.label('deskripsi', ['class': 'control-label']) }} <br><small>Sertakan lokasi dan waktu kejaidan serta kontak yang dapat dihubungi</small></p>  
                     <div class="controls">
                         {{ form.render('deskripsi', ['class': 'form-control']) }}
                         
@@ -65,8 +74,8 @@
                     </div>
                 </div> 
                 <br>
-                <div class='control-group'>
-                    {{ submit_button('Post', 'class': 'btn btn-primary') }}
+                <div class='control-group' align="center">
+                    {{ submit_button('Post', 'class': 'btn btn-success') }}
                 </div>
             
             </fieldset>
@@ -83,13 +92,15 @@
 
               </small>
             </h1>
-            <hr>
-            
+            <!-- <hr> -->
+            <div class="col">
+              <br>
+            <!--FORM CARI-->
             {{ form("post/search") }}
-            <h4 class="text-right">Cari Postingan</h4>
+            <h4 class="text-left">Cari Postingan</h4>
             <div class="control-group">
                 <!-- <small>{{ searchform.label('judul', ['class': 'control-label']) }} </small> -->
-                <small>Cari berdasarkan nama barang</small>
+                <medium>Cari berdasarkan nama barang</medium>
               <div class="controls">
                   {{ form.render('judul', ['class': 'form-control']) }}
                 
@@ -101,7 +112,7 @@
           <br>
           <div class="control-group">
               <!-- <small> {{ searchform.label('deskripsi', ['class': 'control-label']) }} </small> -->
-              <small>cari berdasarkan deskripsi kejadian</small>
+              <medium>Cari berdasarkan deskripsi kejadian</medium>
               <div class="controls">
                   {{ form.render('deskripsi', ['class': 'form-control']) }}
                   
@@ -110,10 +121,15 @@
                   </div> -->
               </div>
           </div>
-
+          <br>
           <div class="control-group">
               {{ submit_button("Search", "class": "btn btn-primary") }}
           </div>
+          <!--FORM CARI-->
+        </div>
+      </div>
+
+           <!--Buat penutup grid-->
                 <hr>
 
             {% for post in page.items %}
@@ -125,11 +141,13 @@
                 <a href="{{url('post/delete/' ~ post.id)}}" class="badge badge-danger">Delete</a>
                 <a href="{{url('post/edit/' ~ post.id)}}" class="badge badge-warning">Edit</a>
                 {% endif %}
-                <h2 class="card-title"><span class="badge badge-secondary">{{post.status}}</span> {{post.judul}}</h2>
+                <h2 class="card-title"><span class="badge badge-secondary">{{post.status}}</span><br><br> {{post.judul}}</h2>
                 <p class="card-text">{{post.deskripsi}}</p>
+                <div align="right">
                 <a href="{{url('post/show/' ~ post.id)}}" class="btn btn-primary">Lebih lanjut &rarr;</a>
+                </div>
               </div>
-              <div class="card-footer text-muted">
+              <div class="card-footer text-muted" >
                 Posted on January 1, 2017 by {{post.users.email}}
                 {# <a href="#">Start Bootstrap</a> #}
               </div>
@@ -146,7 +164,7 @@
                             </a>
                           </li>
                     <li class="page-item">
-                            <a class="page-link" href='/post/index?page=<?= $page->next; ?>'>&rarr; Next</a>
+                            <a class="page-link" href='/post/index?page=<?= $page->next; ?>'> Next&rarr;</a>
                           </li>
                    
                   </ul>
@@ -207,28 +225,30 @@
             </div>
     #}
             <!-- Side Widget -->
+            <script src='https://kit.fontawesome.com/a076d05399.js'></script>
             <div class="card my-4">
-              <h5 class="card-header">Contact Person PORMA</h5>
+              <h5 class="card-header">login sebagai</h5>
               <div class="card-body">
                 <address>
-                  <abbr title="Phone">P:</abbr>
-                  (123) 456-7890
-                  <br>
-                  <abbr title="Email">E:</abbr>
-                  <a href="mailto:#">admin@PORMA.com</a>
+                  <abbr title="email_auth"><i class="fas fa-user"></i> {{auth['email']}}</abbr>
                 </address>
               </div>
             </div>
 
             <div class="card my-4">
-                <h5 class="card-header">Kamu login sebagai</h5>
-                <div class="card-body">
-                  <address>
-                    <abbr title="email_auth">{{auth['email']}}</abbr>
-                  </address>
-                </div>
+              <h5 class="card-header">Contact Person</h5>
+              <div class="card-body">
+                <address>
+                  <abbr title="Phone"><i class='fas fa-phone'></i></abbr>
+                  (123) 456-7890
+                  <br>
+                  <abbr title="Email"><i class='fas fa-mail-bulk'></i></abbr>
+                  <a href="mailto:#">admin@foundit.com</a>
+                </address>
               </div>
-    
+            </div>
+
+            
           </div>
     
         </div>

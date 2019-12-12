@@ -2,10 +2,12 @@
 
 {% block content %}
     
-
-    <div class="container">  
+<div class ="row"style="background-color: ">
+    <div class="col" style="background-position: center ;background-image: url('http://img.picturequotes.com/2/8/7095/sometimes-you-lose-the-good-things-to-make-room-for-the-great-things-quote-1.jpg')">            
+    </div>
+    <div class="col" >  
     <h3>LAMAN DAFTAR</h3>
-    <p>Daftar untuk mendapatkan berbagai fitur dari <span class="font-weight-bold">PORMA</span></p>
+    <p>Daftar untuk mendapatkan berbagai fitur dari <span class="font-weight-bold">FOUNDIT</span></p>
     <hr>
     {{ form('signup/create') }}
     <div class="container-md p-3 mb-2 bg-light text-dark">
@@ -13,36 +15,10 @@
             {{content()}}
         {% endif %}
         <fieldset>
-            {% for element in form %}
-            <div class="control-group">
-                    {{ element.label(['class': 'control-label']) }}
-                    <div class="controls">
-                        {{ element.render(['class' : 'form-control']) }}
-                        <p class="help-block">(required)</p>
-                    </div>
-                </div>
-            {% endfor %}
-            
-
-
-
-
-            
-            {# Terkomen
             <div class="control-group">
                 {{ form.label('email', ['class': 'control-label']) }}
                 <div class="controls">
                     {{ form.render('email', ['class': 'form-control']) }}
-                    <p class="help-block">(required)</p>
-                    <!-- <div class="alert alert-warning" id="email_alert">
-                        <strong>Warning!</strong> Please enter your email
-                    </div> -->
-                </div>
-            </div>
-            <div class="control-group">
-                {{ form.label('username', ['class': 'control-label']) }}
-                <div class="controls">
-                    {{ form.render('username', ['class': 'form-control']) }}
                     <p class="help-block">(required)</p>
                     <!-- <div class="alert alert-warning" id="email_alert">
                         <strong>Warning!</strong> Please enter your email
@@ -69,17 +45,19 @@
                     </div> -->
                 </div>
             </div>
-        #}
             <br>
-            <p class="help-block">Dengan mendaftar, Anda menyetujui syarat dan ketentuan yang berlaku.</p>
+            <p class="help-block" style="font-size: 80%">Dengan mendaftar, Anda Menyetujui Syarat dan Ketentuan yang Berlaku, Kebijakan Data dan Kebijakan Cookie kami. Anda akan menerima Notifikasi Email dan dapat menolaknya kapan saja.</p><br>
             <div class="form-actions">
-                {{ submit_button('Daftar', 'class': 'btn btn-primary') }}
+                {{ submit_button('Daftar', 'class': 'btn btn-md btn-success') }}
                 
             </div>
         </fieldset>
-        <a href="/session">Sudah punya akun?</a>
+        <br><a href="/session">Sudah punya akun?</a>
         <hr>
     </div>
     {{ endForm() }}
     </div>
+    
+    
+</div>
 {% endblock %}
